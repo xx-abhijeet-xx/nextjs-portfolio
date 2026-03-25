@@ -1,30 +1,102 @@
-# Portfolio Website
+# nextjs-portfolio
 
-This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.
+> Developer portfolio on Next.js 13 App Router — Framer Motion scroll reveals, animated achievement counters, type-animation hero, and a live contact form via Resend.
 
-## Installation
+---
 
-1. Clone the repository: `git clone https://github.com/judygab/nextjs-portfolio.git`
-2. Navigate to the project directory: `cd portfolio-website`
-3. Install the dependencies: `npm install`
+## Features
 
-## Usage
+- **App Router architecture** — Server Components by default; `"use client"` only where animation or interactivity actually requires it
+- **Framer Motion scroll reveals** — `whileInView` + `viewport={{ once: true }}` fires each animation exactly once per element
+- **Animated achievement counters** — `react-animated-numbers` with odometer-style count-up on section entry
+- **Type animation hero** — Cycling typewriter phrases with configurable sequence and deletion speed
+- **Live contact form** — Server-side handler posts to Resend API; form gives optimistic feedback before the API responds
+- **Tab-based About section** — Skills, Education, and Certifications without any page navigation
+- **Fully responsive** — Mobile-first layout with Tailwind breakpoints
 
-1. Start the development server: `npm run dev`
-2. Open your browser and visit `http://localhost:3000` to view the website.
+---
 
-## Dependencies
+## Tech Stack
 
-The following dependencies are required for this project:
+| Tool | Purpose |
+|------|---------|
+| Next.js 13 App Router | File-based routing, Server Components, Route Handlers |
+| Framer Motion | Declarative spring animations with scroll triggers |
+| Resend | Transactional email API for the contact form |
+| react-type-animation | Typewriter hero with configurable phrase sequences |
+| react-animated-numbers | Odometer-style counter animations |
+| Tailwind CSS | Utility-first design system |
+| Heroicons | Icon set aligned with Tailwind's design language |
 
-- Next.js: A React framework for server-side rendering and static site generation.
-- Tailwind CSS: A highly customizable CSS framework.
-- React: A JavaScript library for building user interfaces.
-- React Icons: A collection of popular icons for React projects.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Resend: Resend is the email API for developers.
+---
+
+## Getting Started
+
+```bash
+git clone https://github.com/YOUR_USERNAME/nextjs-portfolio.git
+cd nextjs-portfolio && npm install
+```
+
+Create `.env.local`:
+```env
+RESEND_API_KEY=re_your_key_here
+```
+
+Get a free Resend API key at [resend.com](https://resend.com).
+
+```bash
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run start   # serve production build
+```
+
+---
+
+## Project Structure
+
+```
+src/app/
+├── page.jsx                     # Root page — imports all sections
+├── api/
+│   └── send/
+│       └── route.js             # Route Handler → Resend API
+└── components/
+    ├── HeroSection.jsx          # type-animation typewriter
+    ├── AboutSection.jsx         # Tab-based (Skills / Education / Certs)
+    ├── AchievementsSection.jsx  # react-animated-numbers counters
+    ├── ProjectsSection.jsx      # Filterable project cards
+    ├── ProjectCard.jsx
+    ├── ProjectTag.jsx
+    ├── EmailSection.jsx         # Contact form → /api/send
+    ├── Navbar.jsx + MenuOverlay.jsx
+    ├── NavLink.jsx
+    ├── TabButton.jsx
+    └── Footer.jsx
+```
+
+---
+
+## Customization
+
+**Projects** — Edit the `projectsData` array in `ProjectsSection.jsx`. Each entry takes `id`, `title`, `description`, `image`, `tag`, `gitUrl`, and `previewUrl`.
+
+**Achievements** — Edit the metrics array in `AchievementsSection.jsx`.
+
+**Contact email** — Update the `to` field in `app/api/send/route.js` with your email address.
+
+---
+
+## Deploy
+
+```bash
+# Vercel (recommended for Next.js)
+npm i -g vercel && vercel
+
+# Add RESEND_API_KEY in Vercel Environment Variables
+```
+
+---
 
 ## License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
-
+MIT
