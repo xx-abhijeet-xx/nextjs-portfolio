@@ -29,7 +29,7 @@ const projectsData = [
     description: "Utilized latest web development technologies such as GSAP and Scroll Trigger to create seamless and captivating animations, enhancing the user experience. Implemented scroll-triggered animations to create a video-like effect as users scroll through the page, showcasing careful planning and execution. Serves as a testament to my creative vision, technical skills, and dedication to crafting a unique and captivating web presence.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/xx-abhijeet-xx/Neverland-Agency?tab=readme-ov-file",
+    gitUrl: "https://github.com/abhijeet-builds/Neverland-Agency?tab=readme-ov-file",
     previewUrl: "https://neverlandagency.netlify.app/",
   },
   {
@@ -38,7 +38,7 @@ const projectsData = [
     description: "Utilized GSAP, Locomotive, and Parallax to create an immersive experience, bringing the brewery atmosphere to life. Implemented a unique feature where the beer bottle moves with the swipe of your finger as you scroll down the page, enhancing user engagement. Magic effect: The beer bottle seamlessly fixes itself into the container as users continue to explore the website, adding an element of surprise and delight.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
-    gitUrl: "https://github.com/xx-abhijeet-xx/Lagunitas-Beer_Ad?tab=readme-ov-file",
+    gitUrl: "https://github.com/abhijeet-builds/Lagunitas-Beer_Ad?tab=readme-ov-file",
     previewUrl: "https://lagunitas.netlify.app/",
   },
   {
@@ -47,7 +47,7 @@ const projectsData = [
     description: "Light/dark mode toggle: Choose your preferred viewing mode, with the option to switch between a dark or light background for a more personalized experience. Smooth Scrolling Animations: Experience seamless and effortless scrolling animations powered by Locomotive Scroll, creating an unforgettable user experience. Stunning Parallax Effects: Add depth and dimension to your website with our innovative parallax effects, designed to captivate and engage visitors.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/xx-abhijeet-xx/Jomor-Design?tab=readme-ov-file",
+    gitUrl: "https://github.com/abhijeet-builds/Jomor-Design?tab=readme-ov-file",
     previewUrl: "https://jomor-design.netlify.app/",
   },
 ];
